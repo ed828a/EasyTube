@@ -10,6 +10,9 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PageActivity extends YouTubeBaseActivity {
 
     private static final String TAG = PageActivity.class.getSimpleName();
@@ -32,11 +35,11 @@ public class PageActivity extends YouTubeBaseActivity {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 Log.d(TAG, "onInitialization: Done Successfully.");
-//                List<String> videoList = new ArrayList<>();
-//                videoList.add("nQwkCb_eq50");
-//                videoList.add("2duc77R4Hqw");
-//                youTubePlayer.loadVideos(videoList);
-                youTubePlayer.loadPlaylist("PLgCYzUzKIBE8TUoCyjomGFqzTFcJ05OaC");
+                List<String> videoList = new ArrayList<>();
+                videoList.add("nQwkCb_eq50");
+                videoList.add("2duc77R4Hqw");
+                youTubePlayer.loadVideos(videoList);
+//                youTubePlayer.loadPlaylist("PLgCYzUzKIBE8TUoCyjomGFqzTFcJ05OaC");
 //                youTubePlayer.loadVideo("2duc77R4Hqw");
             }
 
